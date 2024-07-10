@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="owner.css">
+    <title>Daftar Transaksi</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 text-center">
+                <h1>List Transaksi</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Pembeli</th>
+                            <th>Barang</th>
+                            <th>Jumlah</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{range .}}
+                        <tr>
+                            <td>{{.UsernamePembeli}}</td>
+                            <td>{{.BarangDibeli.Nama}}</td>
+                            <td>{{.Jumlah}}</td>
+                        </tr>
+                        {{else}}
+                        <tr>
+                            <td colspan="3">Tidak Ada Transaksi.</td>
+                        </tr>
+                        {{end}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <a href="/ownerr" class="btn btn-secondary mt-3">Kembali Ke Halaman Pemilik</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

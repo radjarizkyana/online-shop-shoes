@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="owner.css">
+    <title>Halaman Pemilik Toko</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-12 text-center">
+                <h1>Owner Page</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="mt-3">Daftar Barang</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Nama</th>
+                            <th>Harga</th>
+                            <th>Kuantitas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{range .BarangList}}
+                        <tr>
+                            <td>{{.Nama}}</td>
+                            <td>{{.Harga}}</td>
+                            <td>{{.Kuantitas}}</td>
+                        </tr>
+                        {{else}}
+                        <tr>
+                            <td colspan="3">Tidak ada barang.</td>
+                        </tr>
+                        {{end}}
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="col-md-6">
+                <h2 class="mt-3">Tambah Barang</h2>
+                <form action="/ownerr?action=add" method="post">
+                    <div class="form-group">
+                        <label for="add_nama">Nama:</label>
+                        <input type="text" class="form-control" id="add_nama" name="nama">
+                    </div>
+                    <div class="form-group">
+                        <label for="add_harga">Harga:</label>
+                        <input type="text" class="form-control" id="add_harga" name="harga">
+                    </div>
+                    <div class="form-group">
+                        <label for="add_kuantitas">Kuantitas:</label>
+                        <input type="text" class="form-control" id="add_kuantitas" name="kuantitas">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Tambah</button>
+                    <a href="/transactions" class="btn btn-primary">Cetak Daftar Transaksi</a>
+                </form>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="mt-2">Edit Barang</h2>
+                <form action="/ownerr?action=edit" method="post">
+                    <div class="form-group">
+                        <label for="edit_nama">Nama Lama:</label>
+                        <input type="text" class="form-control" id="edit_nama" name="edit_nama">
+                    </div>
+                    <div class="form-group">
+                        <label for="new_nama">Nama Baru:</label>
+                        <input type="text" class="form-control" id="new_nama" name="new_nama">
+                    </div>
+                    <div class="form-group">
+                        <label for="new_harga">Harga Baru:</label>
+                        <input type="text" class="form-control" id="new_harga" name="new_harga">
+                    </div>
+                    <div class="form-group">
+                        <label for="new_kuantitas">Kuantitas Baru:</label>
+                        <input type="text" class="form-control" id="new_kuantitas" name="new_kuantitas">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Edit</button>
+                </form>
+            </div>
+            
+            <div class="col-md-6">
+                <h2 class="mt-5">Hapus Barang</h2>
+                <form action="/ownerr?action=delete" method="post">
+                    <div class="form-group">
+                        <label for="delete_nama">Nama:</label>
+                        <input type="text" class="form-control" id="delete_nama" name="delete_nama">
+                    </div>
+                    <button type="submit" class="btn btn-danger">Hapus</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <a href="/" class="btn btn-secondary mt-3">Kembali Ke Beranda</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

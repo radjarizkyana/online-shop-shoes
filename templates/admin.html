@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/admin.css">
+    <title>Halaman Admin</title>
+</head>
+<body>
+    <h1>Halaman Admin</h1>
+    <h2>Daftar Akun yang Menunggu Persetujuan</h2>
+    <table>
+        <tr>
+            <th>Nama</th>
+            <th>Tipe</th>
+            <th>Disetujui</th>
+            <th>Action</th>
+        </tr>
+        {{range $index, $akun := .}}
+        <tr>
+            <td>{{$akun.Username}}</td>
+            <td>{{$akun.Tipe}}</td>
+            <td>{{$akun.Disetujui}}</td>
+            <td>
+                {{if not $akun.Disetujui}}
+                <form action="/admin" method="post" style="display:inline;">
+                    <input type="hidden" name="index" value="{{$index}}">
+                    <input type="hidden" name="action" value="approve">
+                    <input type="submit" value="Approve">
+                </form>
+                {{end}}
+                <form action="/admin" method="post" style="display:inline;">
+                    <input type="hidden" name="index" value="{{$index}}">
+                    <input type="hidden" name="action" value="delete">
+                    <input type="submit" value="Delete">
+                </form>
+            </td>
+        </tr>
+        {{end}}
+    </table>
+    <div class="btn-container">
+        <a href="/" class="btn">Kembali Ke Beranda</a>
+    </div>
+</body>
+</html>

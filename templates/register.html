@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Halaman Daftar</title>
+    <link rel="stylesheet" href="/static/css/login.css">
+</head>
+<body>
+    <h1>Daftar</h1>
+    <form method="post" action="/register">
+        <label for="username">Nama :</label>
+        <input type="text" id="username" name="username" required><br>
+        <label for="password">Kata Sandi :</label>
+        <input type="password" id="password" name="password" required><br>
+        <label for="tipe">Tipe :</label>
+        <select id="tipe" name="tipe">
+            <option value="pemilik">Pemilik</option>
+            <option value="pembeli">Pembeli</option>
+        </select><br>
+        <input type="submit" value="Register">
+    </form>
+    <a href="/">Kembali Ke Beranda</a>
+</body>
+</html>

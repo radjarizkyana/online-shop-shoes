@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Halaman Pembeli</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-center">Halaman Pembeli</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="mt-3">Beli Barang</h2>
+                <form method="post" action="/buyer">
+                    <div class="form-group">
+                        <label for="nama_barang">Nama Barang:</label>
+                        <input type="text" id="nama_barang" name="nama_barang" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="jumlah">Jumlah:</label>
+                        <input type="number" id="jumlah" name="jumlah" class="form-control" required>
+                    </div>
+                    <input type="hidden" name="username" value="{{.Username}}">
+                    <button type="submit" class="btn btn-primary btn-block">Beli</button>
+                </form>
+            </div>
+
+            <div class="col-md-6">
+                <h2 class="mt-3">Sortir dan cari barang</h2>
+                <form method="get" action="/buyer">
+                    <input type="hidden" name="username" value="{{.Username}}">
+                    <div class="form-group">
+                        <label for="search">Cari menurut nama :</label>
+                        <input type="text" id="search" name="search" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="sort">Urutkan menurut:</label>
+                        <select id="sort" name="sort" class="form-control">
+                            <option value="">-</option>
+                            <option value="name_asc">Nama: A-Z</option>
+                            <option value="name_desc">Nama: Z-A</option>
+                            <option value="price">Harga : Rendah ke tinggi</option>
+                            <option value="price_desc">Harga: Tinggi ke rendah</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Urutkan/Cari</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="text-center mt-5">List Barang</h2>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Nama</th>
+                            <th>Harga</th>
+                            <th>Kuantitas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {{range .BarangList}}
+                        <tr>
+                            <td>{{.Nama}}</td>
+                            <td>{{.Harga}}</td>
+                            <td>{{.Kuantitas}}</td>
+                        </tr>
+                        {{else}}
+                        <tr>
+                            <td colspan="3">Barang tidak tersedia.</td>
+                        </tr>
+                        {{end}}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12">
+                <a href="/" class="btn btn-danger btn-block">Keluar</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+Akun List:
+Username: admin, Password: admin123, Tipe: admin, Disetujui: true
+Username: radja rizky, Password: 123, Tipe: pemilik, Disetujui: true
+Username: yoga, Password: yoga123, Tipe: pembeli, Disetujui: true
+Username: fikri, Password: fikri123, Tipe: pembeli, Disetujui: true
+Username: roihan, Password: roihan123, Tipe: pembeli, Disetujui: true
+
+Barang List:
+Nama: Nike Air Force 1, Harga: 1700000, Kuantitas: 48
+Nama: Nike Air Jordan 1, Harga: 2500000, Kuantitas: 25
+Nama: Nike Dunk, Harga: 1900000, Kuantitas: 30
+Nama: Nike Air Max 1, Harga: 2300000, Kuantitas: 16
+Nama: Nike Cortez, Harga: 1000000, Kuantitas: 100
+Nama: Nike Blazer, Harga: 1100000, Kuantitas: 45
+Nama: Nike Air Huarache, Harga: 1300000, Kuantitas: 10
+Nama: Nike Air Presto, Harga: 2500000, Kuantitas: 5
+Nama: Nike Pegasus 41, Harga: 2000000, Kuantitas: 20
+Nama: Nike Air Max 97, Harga: 3000000, Kuantitas: 70
+Nama: Nike SB Dunk, Harga: 1549000, Kuantitas: 55
+Nama: Nike Gamma Force, Harga: 1399000, Kuantitas: 65
+Nama: Nike Tatum 1, Harga: 1528000, Kuantitas: 150
+Nama: Nike Zion 3 PF, Harga: 2199000, Kuantitas: 35
+Nama: LeBron XXI EP, Harga: 3169000, Kuantitas: 120
+Nama: Nike G.T. Cut 3 EP, Harga: 3049000, Kuantitas: 15
+Nama: Tatum 2 , Harga: 1939000, Kuantitas: 40
+Nama: Tatum 1 , Harga: 1148000, Kuantitas: 140
+Nama: Air Jordan 5, Harga: 3269000, Kuantitas: 7
+Nama: KD17, Harga: 2489000, Kuantitas: 110
+Nama: KD16, Harga: 3050000, Kuantitas: 130
+Nama: Adidas Adizero Adios Pro 3, Harga: 4000000, Kuantitas: 2
+Nama: Adidas NMD, Harga: 1725000, Kuantitas: 40
+Nama: Yeezy Boost 350, Harga: 3000000, Kuantitas: 90
+Nama: Yeezy 500, Harga: 3800000, Kuantitas: 25
+Nama: Yeezy 700, Harga: 3700000, Kuantitas: 15
+Nama: Yeezy Boost 350 V2, Harga: 4100000, Kuantitas: 10
+Nama: Adidas Ultraboost 1.0, Harga: 2550000, Kuantitas: 17
+Nama: Adidas Ultraboost 23, Harga: 1980000, Kuantitas: 2
+Nama: Adidas Stan Smith , Harga: 1360000, Kuantitas: 50
+Nama: Adidas Stan Smith CS, Harga: 1920000, Kuantitas: 23
+Nama: Adidas Superstar (W), Harga: 1360000, Kuantitas: 100
+Nama: Adidas Superstar (M), Harga: 1360000, Kuantitas: 90
+Nama: Adidas Superstar XLG, Harga: 1500000, Kuantitas: 120
+Nama: Adidas Trae Young 3, Harga: 2500000, Kuantitas: 160
+Nama: Dame Certified 2.0, Harga: 900000, Kuantitas: 5
+Nama: Dame 8, Harga: 1260000, Kuantitas: 20
+Nama: Adidas Adizero Bounce Select 2.0, Harga: 2100000, Kuantitas: 60
+Nama: Harden Volume 7, Harga: 2600000, Kuantitas: 80
+Nama: AE 1 (Kids), Harga: 850000, Kuantitas: 20
+Nama: AE 1 (M), Harga: 1500000, Kuantitas: 40
+Nama: AE 1 (W), Harga: 1500000, Kuantitas: 40
+Nama: Adidas Samba Inter Miami CF, Harga: 2200000, Kuantitas: 2
+Nama: Puma x Playstation RS-X, Harga: 1899000, Kuantitas: 52
+Nama: Puma Rebound, Harga: 1199000, Kuantitas: 21
+Nama: Puma x One Piece Gear 5, Harga: 1299000, Kuantitas: 9
+Nama: Puma x One Piece Buggy, Harga: 1299000, Kuantitas: 14
+Nama: Puma x One Piece Red-Haired Shanks, Harga: 1299000, Kuantitas: 8
+Nama: Puma x One Piece Blackbeard, Harga: 1299000, Kuantitas: 25
+Nama: Puma Palermo, Harga: 1599000, Kuantitas: 20
+
+Transaksi List:
+Pembeli: roihan, Barang: Nike Air Force 1, Jumlah: 2
